@@ -1,0 +1,43 @@
+{
+  "name": "simple-react-sass-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple React/SASS/Webpack boilerplate",
+  "scripts": {
+    "lint": "eslint src",
+    "start": "webpack && node server.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csepreghy/simple-react-sass-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "sass",
+    "boilerplate"
+  ],
+  "author": "Andrew Chepreghy",
+  "license": "MIT",
+  "homepage": "https://github.com/csepreghy/simple-react-sass-webpack-boilerplate",
+  "devDependencies": {
+    "babel-core": "6.10.4",
+    "babel-loader": "6.0.1",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-stage-0": "6.5.0",
+    "css-loader": "^0.23.1",
+    "eslint": "2.7.0",
+    "eslint-plugin-react": "5.2.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "node-sass": "3.8.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.11.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  }
+}

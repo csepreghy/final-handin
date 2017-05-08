@@ -9,7 +9,8 @@ class Partners extends Component {
 
  render() {
    return (
-     <div className="ultimate-container">
+     <div className="">
+       <h1>Partners</h1>
      </div>
    );
  }

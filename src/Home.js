@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Events from './Events';
 
 class Home extends Component {
 
@@ -10,7 +11,7 @@ class Home extends Component {
  render() {
    return (
      <div className="ultimate-container">
-         <span>Home Sweet home</span>
+         <Events />
      </div>
    );
  }

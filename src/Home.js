@@ -6,14 +6,14 @@ class Home extends Component {
   constructor(props) {
     super();
 
- }
+  }
 
- render() {
-   return (
-     <div className="ultimate-container">
-         <Events />
-     </div>
-   );
- }
+  render() {
+    return (
+      <div className="ultimate-container">
+          <Events />
+      </div>
+    );
+  }
 }
-export default Home;
+ export default Home;

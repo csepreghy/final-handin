@@ -41,6 +41,10 @@ const PreLoader = () => (
           </div>
         </div>
       </div>
+      <div>
+        <p>Logging in with double-encrypted connection</p>
+        <p>Be patient, this could take a while</p>
+      </div>
     </div>
   </section>
 );

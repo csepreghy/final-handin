@@ -29,10 +29,6 @@ class Partners extends Component {
                <a className=""><li><img src="/assets/google.png" /></li></a>
                <a className=""><li><img src="/assets/tesla.png" /></li></a>
                <a className=""><li><img src="/assets/intel.png" /></li></a>
-               <a className=""><li><img src="/assets/amazon.png" /></li></a>
-               <a className=""><li><img src="/assets/nvidia.png" /></li></a>
-               <a className=""><li><img src="/assets/apple.png" /></li></a>
-               <a className=""><li><img src="/assets/google.png" /></li></a>
              </ul>
            </div>
          </div>

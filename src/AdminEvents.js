@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Event from './Event';
+import AdminEvent from './AdminEvent';
 
 class AdminEvents extends Component {
 
@@ -10,11 +10,13 @@ class AdminEvents extends Component {
 
   render() {
     return (
-       <section id="events" className="content">
-         <ul className="collapsible" data-collapsible="accordion">
-           <Event />
-        </ul>
-      </section>
+       <section id="admin-events" className="content">
+         <AdminEvent />
+         <AdminEvent />
+         <AdminEvent />
+         <AdminEvent />
+         <AdminEvent />
+       </section>
     );
   }
 }

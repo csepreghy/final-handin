@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Event = ({initMap}) => (
-  <li onClick={ initMap }>
+  <ul className="collapsible" data-collapsible="accordion">
+  <li>
     <div className="collapsible-header">
       <div className="icon-container">
-        <i className="material-icons">keyboard_arrow_down</i>
+        <a onClick={ initMap }><i className="material-icons">keyboard_arrow_down</i></a>
     </div>
     <div className="event-info-container">
       <h2>22 May, Thu. 20:00 - Tech event title</h2>
@@ -12,7 +13,7 @@ const Event = ({initMap}) => (
         <div className="tag-container">
           <div className="chip">React<i className="close material-icons">close</i></div>
           <div className="chip">Yo!<i className="close material-icons">close</i></div>
-          <div className="chip">Fuck C#!<i className="close material-icons">close</i></div>
+          <div className="chip">JesusLovesYou!<i className="close material-icons">close</i></div>
         </div>
     </div>
   </div>
@@ -44,6 +45,7 @@ const Event = ({initMap}) => (
     </div>
   </div>
   </li>
+  </ul>
 );
 
 export default Event;

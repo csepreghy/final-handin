@@ -172,15 +172,13 @@ class Events extends Component {
   render() {
     return (
        <section id="events" className="content">
-         <ul className="collapsible" data-collapsible="accordion">
-           <Event initMap={ this.initMap }/>
-           <Event initMap={ this.initMap }/>
-           <Event initMap={ this.initMap }/>
-           <Event initMap={ this.initMap }/>
-           <Event initMap={ this.initMap }/>
-           <Event initMap={ this.initMap }/>
-        </ul>
-      </section>
+         <Event initMap={ this.initMap }/>
+         <Event initMap={ this.initMap }/>
+         <Event initMap={ this.initMap }/>
+         <Event initMap={ this.initMap }/>
+         <Event initMap={ this.initMap }/>
+         <Event initMap={ this.initMap }/>
+       </section>
     );
   }
 }

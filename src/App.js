@@ -13,7 +13,7 @@ class App extends Component {
     super();
 
     this.state = {
-      pageContent: "home",
+      pageContent: "login",
       admin: false
     }
 
@@ -56,7 +56,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({ pageContent: "adminEvents" });
-    }, 300);
+    }, 100);
   }
 
   toggleAdmin() {

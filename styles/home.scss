@@ -370,3 +370,41 @@ html, body, #the-universe {
   }
 }
 
+#admin-partners {
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  .card-title {
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      font-size: 50px;
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    position: relative;
+    top: -30px;
+  }
+
+  .divider {
+    margin-top: 20px;
+  }
+
+  .logos-container {
+    ul {
+      li {
+        display: inline-block;
+        height: 80px;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+

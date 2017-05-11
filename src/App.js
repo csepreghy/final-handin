@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Login from './Login';
 import PreLoader from './PreLoader';
 import AdminEvents from './AdminEvents';
+import AdminPartners from './AdminPartners';
 
 class App extends Component {
 
@@ -47,6 +48,8 @@ class App extends Component {
         return <PreLoader />
       case "adminEvents":
         return <AdminEvents />
+      case "adminPartners":
+        return <AdminPartners />
     }
   }
 
@@ -80,7 +83,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar handleNavClick={ this.handleNavClick } />
+        <Navbar handleNavClick={ this.handleNavClick } isAdmin={ this.state.admin } />
         { this.getContent() }
         <footer className="page-footer">
           <div className="container">

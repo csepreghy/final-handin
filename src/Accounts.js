@@ -56,7 +56,7 @@ class Accounts extends Component {
     return (
       <section className="content" id="accounts">
         <div className="fixed-action-btn">
-          <button onClick={ this.addAccount } className="btn-floating btn-large waves-effect waves-light z-depth-4"><i className="material-icons secondary">add</i></button>
+          <button onClick={ this.addAccount } className="btn-floating btn-large waves-effect waves-light z-depth-4"><i className="material-icons">add</i></button>
         </div>
         <ul className="collection">
           { 
@@ -66,7 +66,7 @@ class Accounts extends Component {
                   <img src={ this.state.imgs[index] } alt="" className="circle" />
                   <span className="title secondary">{ item }</span>
                   <p>{ this.state.emails[index] }</p>
-                  <a onClick={ this.deleteAccount } className="secondary-content"><i id={ index } className="material-icons secondary">delete</i></a>
+                  <button onClick={ this.deleteAccount } className="btn-floating btn-large waves-effect waves-light secondary-content"><i id={ index } className="material-icons secondary">delete</i></button>
                 </li>
               )
             }) 

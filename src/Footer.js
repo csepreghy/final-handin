@@ -13,7 +13,7 @@ class Footer extends Component {
         <div className="footer-copyright">
             <div className="container">
             © 2017 Copyright Text
-            <a className="waves-effect waves-light btn-flat admin-button" onClick={ this.props.toggleAdmin }>change to { this.props.getAdminLabel() }</a>
+            <a className="waves-effect waves-light btn-flat admin-button" onClick={ this.props.adminSwither }>{ this.props.getAdminLabel() }</a>
             </div>
         </div>
     </footer>

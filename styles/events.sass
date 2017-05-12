@@ -1,0 +1,141 @@
+//EVENTS
+
+.events
+  margin-bottom: 20px
+
+  .collapsible
+    .collapsible-header
+      display: flex
+
+      .icon-container
+        i
+          transform: translateY(-50%)
+          position: relative
+          top: 50%
+        
+      .event-info-container
+        display: flex
+        flex-direction: column
+
+        h2
+          font-size: 22px
+          margin-bottom: 5px
+          color: $secondary800
+      
+        span
+          line-height: 2
+      
+    .collapsible-body  
+      display: flex
+      justify-content: space-around
+
+      .content-left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        ul
+          li
+            line-height: 2
+
+      .content-right
+        span
+          display: block
+          margin-top: 10px
+      
+        .map-container
+          .map-img
+            width: 300px 
+        
+      .logos-container
+        margin-top: 10px
+        
+        img
+          display: inline-block
+          width: 50px
+          margin-right: 30px
+
+      .sponsors-label
+        font-size: 18px
+        font-weight: 400
+              
+#admin-events
+  .tag-container
+    .chip
+      i
+        margin: 0
+      
+  .collapsible
+    .collapsible-header
+      position: relative
+
+      button
+        position: absolute
+        right: 10px
+        top: 10px
+
+        i
+          width: inherit
+        
+      .event-info-container
+        .title-container
+          display: flex
+        
+        h2:hover
+          border: 1px solid #ddd
+          
+        form
+          input
+            border: 1px solid #ddd
+          
+          input.event-title
+            margin-bottom: 0
+            margin-top: 20px
+            height: 30px
+            width: 400px
+            font-size: 20px
+          
+          &.small-description-form
+            width: 250px
+            display: inline-block
+
+          input.small-description
+            height: 26px
+            margin: 0
+            width: 100%
+            
+        i.edit
+          margin-top: 15px
+          margin-left: 10px
+          color: $secondary800
+        
+        i.add
+          float: right
+          font-size: 18px
+          line-height: 32px
+        
+        #tag
+          border: none
+          line-height: 1
+          height: auto
+          width: auto
+          transition: width 0s
+        
+        .small-description-container
+          i
+            float: none
+            display: inline
+            font-size: 18px
+          
+        span:hover
+          border: 1px solid #ddd
+          
+    .collapsible-body
+      .content-left
+        p:hover
+            border: 1px solid #ddd 
+
+        #description
+          border: 1px solid #ddd
+          width: 620px
+          height: 140px

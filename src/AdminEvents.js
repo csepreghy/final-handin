@@ -53,7 +53,7 @@ class AdminEvents extends Component {
     console.log('this.state: ', this.state);
     console.log('this.props.titles: ', this.props.titles);
     return (
-       <section id="admin-events" className="content">
+       <section id="admin-events" className="content events">
          <button onClick={ this.addEvent } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button>
          { this.getNewEvents() }
          { 

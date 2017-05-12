@@ -33,12 +33,20 @@ class Event extends Component {
             <div className="content-left">
               <p>{ this.props.description }</p>
               <ul>
+                <li><br/></li>
                 <li>
-                  <span>20:00 - 21:00 - Some presentation</span>
+                  <span>20:00 - 21:00 - Some presentation</span><br/>
                   <span>Some description</span>
                 </li>
                 <li>
-                  <span>21:00 - 22:00 - Other presentation</span>
+                  <span>21:00 - 21:15 - Break</span>
+                </li>
+                <li>
+                  <span>21:15 - 22:00 - Other presentation</span><br/>
+                  <span>Some description</span>
+                </li>
+                <li>
+                  <span>22:00 - 23:00 - Other workshop</span><br/>
                   <span>Some description</span>
                 </li>
               </ul>

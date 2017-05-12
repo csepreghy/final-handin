@@ -50,7 +50,9 @@ class AdminEvents extends Component {
     console.log('this.props.titles: ', this.props.titles);
     return (
        <section id="admin-events" className="content events">
-         <button onClick={ this.addEvent } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button>
+         <div className="fixed-action-btn">
+          <button onClick={ this.addEvent } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button>
+         </div>
          { 
            this.state.titles.map((item, index) => {
              return (

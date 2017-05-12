@@ -16,7 +16,7 @@ class App extends Component {
     super();
 
     this.state = {
-      pageContent: "accounts",
+      pageContent: "home",
       admin: false,
       titles: [
         "22 May, Thu. 20:00 - Tech event title",

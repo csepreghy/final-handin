@@ -64,7 +64,7 @@ class AdminPartners extends Component {
              <p>{ this.state.modalText }</p>
            </div>
            <div className="modal-footer">
-             <button onClick={ this.closeModal } className="modal-action modal-close waves-effect waves-green btn-flat">I am deeply honored</button>
+             <a onClick={ this.closeModal } className="modal-action modal-close waves-effect waves-light btn-flat">I am deeply honored</a>
            </div>
          </div>
        </div>

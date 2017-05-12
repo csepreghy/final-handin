@@ -223,7 +223,7 @@ class AdminEvent extends Component {
         <li onClick={ this.blurEverything }>
           <div className="collapsible-header">
             <div className="icon-container">
-              <a><i className="material-icons">keyboard_arrow_down</i></a>
+              <a className="keyboard_arrow_down" ><i className="material-icons">keyboard_arrow_down</i></a>
             </div>
             <div className="event-info-container">
               <div className="title-container">
@@ -254,14 +254,22 @@ class AdminEvent extends Component {
               <div className="content-left">
                 { this.getDescription() }
                 <ul>
+                  <li><br/></li>
                   <li>
-                    <span>20:00 - 21:00 - Some presentation</span>
+                    <span>20:00 - 21:00 - Some presentation</span><br/>
                     <span>Some description</span>
                   </li>
                   <li>
-                    <span>21:00 - 22:00 - Other presentation</span>
+                    <span>21:00 - 21:15 - Break</span>
+                  </li>
+                  <li>
+                    <span>21:15 - 22:00 - Other presentation</span><br/>
                     <span>Some description</span>
                   </li>
+                  <li>
+                  <span>22:00 - 23:00 - Other workshop</span><br/>
+                  <span>Some description</span>
+                </li>
                 </ul>
               </div>
               <div className="content-right">

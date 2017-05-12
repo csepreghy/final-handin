@@ -56,7 +56,7 @@ class Accounts extends Component {
     return (
       <section className="content" id="accounts">
         <div className="fixed-action-btn">
-          <button onClick={ this.addAccount } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons secondary">add</i></button>
+          <button onClick={ this.addAccount } className="btn-floating btn-large waves-effect waves-light z-depth-4"><i className="material-icons secondary">add</i></button>
         </div>
         <ul className="collection">
           { 

@@ -223,7 +223,7 @@ class AdminEvent extends Component {
         <li onClick={ this.blurEverything }>
           <div className="collapsible-header">
             <div className="icon-container">
-              <a><i className="material-icons">keyboard_arrow_down</i></a>
+              <a className="keyboard_arrow_down" ><i className="material-icons">keyboard_arrow_down</i></a>
             </div>
             <div className="event-info-container">
               <div className="title-container">

@@ -17,7 +17,10 @@ class AdminEvent extends Component {
       tags: ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
       isFormTag: false,
       tagValue: "",
-      eventDisplay: "list-item"
+      eventDisplay: "list-item",
+      modalTitle: "Deleting event",
+      modalText: "Are you sure you want to delete this event?",
+      modalDisplay: "none"
     }
 
     this.getEventTitle = this.getEventTitle.bind(this);
@@ -30,6 +33,8 @@ class AdminEvent extends Component {
     this.getDescription = this.getDescription.bind(this);
     this.blurEverything = this.blurEverything.bind(this);
     this.delete = this.delete.bind(this);
+    this.deleteModal = this.deleteModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
  }
 
  componentDidMount() {
@@ -190,12 +195,31 @@ class AdminEvent extends Component {
  }
 
  delete() {
-   this.setState({ eventDisplay: "none" });
+   this.setState({ eventDisplay: "none", modalDisplay: "none" });
+ }
+
+ deleteModal() {
+   this.setState({ modalDisplay: "block" })
+ }
+
+ closeModal() {
+   this.setState({ modalDisplay: "none" });
  }
 
  render() {
    return (
       <ul className="collapsible" data-collapsible="accordion" style={{ display: this.state.eventDisplay }}>
+        <div className="modal-background" style={{ display: this.state.modalDisplay }}></div>
+        <div className="modal" style={{ display: this.state.modalDisplay }}>
+           <div className="modal-content">
+             <h4>{ this.state.modalTitle }</h4>
+             <p>{ this.state.modalText }</p>
+           </div>
+           <div className="modal-footer">
+             <a onClick={ this.closeModal} className="modal-action modal-close waves-effect waves-green btn-flat">F&$K, Nooo!!!</a>
+             <a onClick={ this.delete } className="modal-action modal-close waves-effect waves-green btn-flat">Yes, I beg you!</a>
+           </div>
+         </div>
         <li onClick={ this.blurEverything }>
           <div className="collapsible-header">
             <div className="icon-container">
@@ -205,7 +229,7 @@ class AdminEvent extends Component {
               <div className="title-container">
                 { this.getEventTitle() }
                 <i className="close material-icons edit" onClick={ () => { this.toggleIsForm("eventTitle") } }>edit</i>
-                <button onClick={ this.delete } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">delete</i></button>
+                <button onClick={ this.deleteModal } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">delete</i></button>
 
               </div>
               <div className="small-description-container">

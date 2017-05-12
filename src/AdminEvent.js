@@ -205,7 +205,7 @@ class AdminEvent extends Component {
               <div className="title-container">
                 { this.getEventTitle() }
                 <i className="close material-icons edit" onClick={ () => { this.toggleIsForm("eventTitle") } }>edit</i>
-                <button onClick={ this.delete } className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">delete</i></button>
+                <button onClick={ this.delete } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">delete</i></button>
 
               </div>
               <div className="small-description-container">

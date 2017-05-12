@@ -7,6 +7,7 @@ import Login from './Login';
 import PreLoader from './PreLoader';
 import AdminEvents from './AdminEvents';
 import AdminPartners from './AdminPartners';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -51,7 +52,7 @@ class App extends Component {
     this.toggleAdmin = this.toggleAdmin.bind(this);
     this.getAdminLabel = this.getAdminLabel.bind(this);
     this.loginLoading = this.loginLoading.bind(this);
-  }
+   }
 
   handleNavClick(item) {
     if (item === "home") {
@@ -129,14 +130,7 @@ class App extends Component {
         <main>
         { this.getContent() }
         </main>
-        <footer className="page-footer">
-          <div className="footer-copyright">
-            <div className="container">
-            © 2017 Copyright Text
-            <button className="waves-effect waves-light btn admin-button" onClick={ this.toggleAdmin }>change to { this.getAdminLabel() }</button>
-            </div>
-          </div>
-        </footer>
+        <Footer toggleAdmin={ this.toggleAdmin} getAdminLabel={this.getAdminLabel}/>
       </div>
     );
   }

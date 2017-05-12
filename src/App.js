@@ -126,7 +126,9 @@ class App extends Component {
     return (
       <div>
         <Navbar handleNavClick={ this.handleNavClick } isAdmin={ this.state.admin } />
+        <main>
         { this.getContent() }
+        </main>
         <footer className="page-footer">
           <div className="footer-copyright">
             <div className="container">

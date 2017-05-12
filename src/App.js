@@ -8,6 +8,7 @@ import PreLoader from './PreLoader';
 import AdminEvents from './AdminEvents';
 import AdminPartners from './AdminPartners';
 import Footer from './Footer';
+import Accounts from './Accounts';
 
 class App extends Component {
 
@@ -15,7 +16,7 @@ class App extends Component {
     super();
 
     this.state = {
-      pageContent: "home",
+      pageContent: "accounts",
       admin: false,
       titles: [
         "22 May, Thu. 20:00 - Tech event title",
@@ -93,6 +94,8 @@ class App extends Component {
         )
       case "adminPartners":
         return <AdminPartners />
+      case "accounts":
+        return <Accounts />
     }
   }
 
@@ -102,7 +105,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({ pageContent: "adminEvents" });
-    }, 200);
+    }, 300);
   }
 
   toggleAdmin() {

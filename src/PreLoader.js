@@ -10,14 +10,17 @@ class PreLoader extends Component {
     super();
 
     this.state = {
-      currentLoadingLabel: "Securing connection...",
+      currentLoadingLabel: "Securing connection",
       loadingLabels: [
-        "Securing connection...",
-        "Encrypting session...",
-        "Encrypting the encrypted session...",
-        "Downloading browser history...",
-        "Ordering sushi...",
-        "Downloading viruses..."
+        "Securing connection",
+        "Bits are moving slowly today",
+        "At least you're not on hold",
+        "Moving satelites in position",
+        "Committing latest changes",
+        "Encrypting the encrypted session",
+        "Downloading browser history",
+        "Ordering sushi",
+        "Downloading viruses"
       ],
       indexOfLabel: 0,
       opacity: 1,
@@ -52,7 +55,7 @@ class PreLoader extends Component {
 
   toggleLoginLabels() {
     this.setState({ disableClickingDisplay: "block" })
-    if (this.state.indexOfLabel < 6) {
+    if (this.state.indexOfLabel < 9) {
       timeout1 = setTimeout(() => {
         this.setState({
           currentLoadingLabel: this.state.loadingLabels[this.state.indexOfLabel],

@@ -216,7 +216,7 @@ class AdminEvent extends Component {
              <p>{ this.state.modalText }</p>
            </div>
            <div className="modal-footer">
-             <a onClick={ this.closeModal} className="modal-action modal-close waves-effect waves-green btn-flat">F&$K, Nooo!!!</a>
+             <a onClick={ this.closeModal} className="modal-action modal-close waves-effect waves-green btn-flat">Nooo!!!</a>
              <a onClick={ this.delete } className="modal-action modal-close waves-effect waves-green btn-flat">Yes, I beg you!</a>
            </div>
          </div>

@@ -4,8 +4,7 @@ const Login = ({loginLoading}) => (
      <section className="login-page content">
        <div className="login-container card card-3">
          <img src="/assets/google.png" alt="google logo"/>
-         <button onClick={ loginLoading } className="waves-effect waves-light btn red darken-1">Sign up with Google</button>
-         <span>Already have an account? <a href="#login">Log in</a></span>
+         <button onClick={ loginLoading } className="waves-effect waves-light btn red">Sign in with Google</button>
        </div>
      </section>
 );

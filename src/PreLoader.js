@@ -77,7 +77,7 @@ class PreLoader extends Component {
 
   render() {
     return (
-      <section className="login-page">
+      <section className="login-page content">
         <div onClick={ this.disableClicking } className="disable" style={{ display: this.state.disableClickingDisplay }}></div>
         <div id="loader-modal" style={{ "display": this.state.saveModalDisplay }}>
           <div onClick={ this.changeModalText } className="modal-background"></div>

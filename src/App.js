@@ -104,7 +104,7 @@ class App extends Component {
     this.setState({ pageContent: "loginLoading" });
 
     setTimeout(() => {
-      this.setState({ pageContent: "adminEvents" });
+      this.setState({ pageContent: "adminEvents", admin: true });
     }, 300);
   }
 

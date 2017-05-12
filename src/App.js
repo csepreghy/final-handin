@@ -50,9 +50,9 @@ class App extends Component {
 
     this.getContent = this.getContent.bind(this);
     this.handleNavClick = this.handleNavClick.bind(this);
-    this.toggleAdmin = this.toggleAdmin.bind(this);
     this.getAdminLabel = this.getAdminLabel.bind(this);
     this.loginLoading = this.loginLoading.bind(this);
+    this.adminSwither = this.adminSwither.bind(this);
    }
 
   handleNavClick(item) {
@@ -108,9 +108,9 @@ class App extends Component {
     }, 300);
   }
 
-  toggleAdmin() {
+  adminSwither () {
     if (this.state.admin === false) {
-       this.setState({ pageContent: "login", admin: true });
+       this.setState({ pageContent: "login" });
     } else if (this.state.admin === true) {
        this.setState({ admin: false });
        window.location.replace('/');
@@ -120,9 +120,9 @@ class App extends Component {
   getAdminLabel() {
     console.log('getAdminlabel');
     if (this.state.admin === false) {
-      return "admin";
+      return "admin login";
     } else {
-      return "user";
+      return "logout";
     }
   }
 
@@ -133,7 +133,7 @@ class App extends Component {
         <main>
         { this.getContent() }
         </main>
-        <Footer toggleAdmin={ this.toggleAdmin} getAdminLabel={this.getAdminLabel}/>
+        <Footer adminSwither={ this.adminSwither} getAdminLabel={this.getAdminLabel}/>
       </div>
     );
   }

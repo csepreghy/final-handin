@@ -171,13 +171,20 @@ class Events extends Component {
 
   render() {
     return (
-       <section id="events" className="content">
-         <Event initMap={ this.initMap }/>
-         <Event initMap={ this.initMap }/>
-         <Event initMap={ this.initMap }/>
-         <Event initMap={ this.initMap }/>
-         <Event initMap={ this.initMap }/>
-         <Event initMap={ this.initMap }/>
+       <section id="events" className="content events">
+         { 
+           this.props.titles.map((item, index) => {
+             return (
+               <Event 
+                 title={ this.props.titles[index] }
+                 smallDescription={ this.props.smallDescriptions[index] }
+                 description={ this.props.descriptions[index] }
+                 tags={ this.props.tags[index] }
+                 key={ index }
+               />  
+             ) 
+           })
+         }
        </section>
     );
   }

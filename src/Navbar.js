@@ -7,6 +7,7 @@ class Navbar extends Component {
 
     this.getPartners = this.getPartners.bind(this);
     this.getAccounts = this.getAccounts.bind(this);
+    this.getEvents = this.getEvents.bind(this);
   }
 
   getPartners() {
@@ -21,6 +22,26 @@ class Navbar extends Component {
     }
   }
 
+  getEvents() {
+    if (this.props.isAdmin === false) {
+      return (
+        <li onClick={ () => this.props.handleNavClick("home") }><a>Events</a></li>
+      )
+    } else {
+      return (
+        <li onClick={ () => this.props.handleNavClick("adminEvents") }><a>Edit Events</a></li>
+      )
+    }
+  }
+
+  getAdminNavElement() {
+    if (this.props.isAdmin === true) {
+      return (
+        <span className="admin-panel-label">Admin panel</span>
+      )
+    }
+  }
+
   getAccounts() {
     if (this.props.isAdmin === true) {
       return (
@@ -31,11 +52,13 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className="">
+      <div id="navbar">
         <nav>
           <div className="nav-wrapper">
             <div onClick={ () => this.props.handleNavClick("home") } className="brand-logo">Logo</div>
+            { this.getAdminNavElement() }
             <ul id="nav-mobile" className="right hide-on-med-and-down">
+              { this.getEvents() }
               { this.getPartners() }
               { this.getAccounts() }
               <li onClick={ () => this.props.handleNavClick("about") }><a>About us</a></li>

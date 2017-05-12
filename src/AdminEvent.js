@@ -14,9 +14,10 @@ class AdminEvent extends Component {
       isFormDescription: false,
       descriptionValue: "Freegan retro flexitarian, bushwick crucifix sriracha polaroid four loko banh mi banjo. 3 wolf moon street art waistcoat, forage vexillologist pork belly art party etsy VHS yuccie typewriter viral air plant pitchfork. Hammock vaporware live-edge, af crucifix shoreditch umami godard four dollar toast man bun +1 polaroid. Farm-to-table kogi gentrify poke, thundercats.",
       isFormSchedule: false,
-      tags: ["React", "Yo!", "JesusLovesYou!"],
+      tags: ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
       isFormTag: false,
-      tagValue: ""
+      tagValue: "",
+      eventDisplay: "list-item"
     }
 
     this.getEventTitle = this.getEventTitle.bind(this);
@@ -27,7 +28,19 @@ class AdminEvent extends Component {
     this.getTagContent = this.getTagContent.bind(this);
     this.tagToInput = this.tagToInput.bind(this);
     this.getDescription = this.getDescription.bind(this);
+    this.blurEverything = this.blurEverything.bind(this);
+    this.delete = this.delete.bind(this);
  }
+
+ componentDidMount() {
+   this.setState({
+     eventTitleValue: this.props.title,
+     smallDescriptionValue: this.props.smallDescription,
+     descriptionValue: this.props.description,
+     tags: this.props.tags
+   })
+   console.log('this.props: ', this.props);
+ };
 
  toggleIsForm(item) {
    switch (item) {
@@ -140,6 +153,20 @@ class AdminEvent extends Component {
    }
  }
 
+ blurEverything() {
+   if ((this.state.isFormDescription || this.state.isFormEventTitle || this.state.isFormSchedule || this.state.isFormTag) && this.state.canBlur) {
+     this.setState({
+       isFormEventTitle: false,
+       isFormSmallDescription: false,
+       isFormDescription: false,
+       isFormSchedule: false,
+       isFormTag: false,
+       tagValue: "",
+       inputCanBlur: true
+     }); 
+   }
+ }
+
  getSmallDescription() {
    if (this.state.isFormSmallDescription === false) {
      return (
@@ -162,10 +189,14 @@ class AdminEvent extends Component {
    }
  }
 
+ delete() {
+   this.setState({ eventDisplay: "none" });
+ }
+
  render() {
    return (
-      <ul className="collapsible" data-collapsible="accordion">
-        <li>
+      <ul className="collapsible" data-collapsible="accordion" style={{ display: this.state.eventDisplay }}>
+        <li onClick={ this.blurEverything }>
           <div className="collapsible-header">
             <div className="icon-container">
               <a><i className="material-icons">keyboard_arrow_down</i></a>
@@ -174,6 +205,8 @@ class AdminEvent extends Component {
               <div className="title-container">
                 { this.getEventTitle() }
                 <i className="close material-icons edit" onClick={ () => { this.toggleIsForm("eventTitle") } }>edit</i>
+                <button onClick={ this.delete } className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">delete</i></button>
+
               </div>
               <div className="small-description-container">
                 { this.getSmallDescription() }

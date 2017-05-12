@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Home from './Home';
+import Events from './Events';
 import About from './About';
 import Partners from './Partners';
 import Navbar from './Navbar';
@@ -14,8 +14,36 @@ class App extends Component {
     super();
 
     this.state = {
-      pageContent: "login",
-      admin: false
+      pageContent: "home",
+      admin: false,
+      titles: [
+        "22 May, Thu. 20:00 - Tech event title",
+        "23 May, Fri. 16:00 - React conference",
+        "10 June, Mon. 20:00 - Best event ever",
+        "23 June, Wed. 14:00 - Startups in Copenhagen",
+        "13 July, Wed. 17:00 - Future of VR"
+      ],
+      smallDescriptions: [
+        "This is a one line description",
+        "This is a one line description",
+        "This is a one line description",
+        "This is a one line description",
+        "This is a one line description"
+      ],
+      descriptions: [
+        "Freegan retro flexitarian, bushwick crucifix sriracha polaroid four loko banh mi banjo. 3 wolf moon street art waistcoat, forage vexillologist pork belly art party etsy VHS yuccie typewriter viral air plant pitchfork. Hammock vaporware live-edge, af crucifix shoreditch umami godard four dollar toast man bun +1 polaroid. Farm-to-table kogi gentrify poke, thundercats.",
+        "Freegan retro flexitarian, bushwick crucifix sriracha polaroid four loko banh mi banjo. 3 wolf moon street art waistcoat, forage vexillologist pork belly art party etsy VHS yuccie typewriter viral air plant pitchfork. Hammock vaporware live-edge, af crucifix shoreditch umami godard four dollar toast man bun +1 polaroid. Farm-to-table kogi gentrify poke, thundercats.",
+        "Freegan retro flexitarian, bushwick crucifix sriracha polaroid four loko banh mi banjo. 3 wolf moon street art waistcoat, forage vexillologist pork belly art party etsy VHS yuccie typewriter viral air plant pitchfork. Hammock vaporware live-edge, af crucifix shoreditch umami godard four dollar toast man bun +1 polaroid. Farm-to-table kogi gentrify poke, thundercats.",
+        "Freegan retro flexitarian, bushwick crucifix sriracha polaroid four loko banh mi banjo. 3 wolf moon street art waistcoat, forage vexillologist pork belly art party etsy VHS yuccie typewriter viral air plant pitchfork. Hammock vaporware live-edge, af crucifix shoreditch umami godard four dollar toast man bun +1 polaroid. Farm-to-table kogi gentrify poke, thundercats.",
+        "Freegan retro flexitarian, bushwick crucifix sriracha polaroid four loko banh mi banjo. 3 wolf moon street art waistcoat, forage vexillologist pork belly art party etsy VHS yuccie typewriter viral air plant pitchfork. Hammock vaporware live-edge, af crucifix shoreditch umami godard four dollar toast man bun +1 polaroid. Farm-to-table kogi gentrify poke, thundercats."
+      ],
+      tags: [
+        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
+        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
+        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
+        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
+        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"]
+      ],
     }
 
     this.getContent = this.getContent.bind(this);
@@ -37,7 +65,14 @@ class App extends Component {
     console.log('getcontent');
     switch (this.state.pageContent) {
       case "home":
-        return <Home />
+        return (
+          <Events
+            titles={ this.state.titles }
+            smallDescriptions={ this.state.smallDescriptions }
+            descriptions={ this.state.descriptions }
+            tags={ this.state.tags }
+          />
+        );
       case "about":
         return <About />
       case "partners":
@@ -47,7 +82,14 @@ class App extends Component {
       case "loginLoading":
         return <PreLoader />
       case "adminEvents":
-        return <AdminEvents />
+        return (
+          <AdminEvents 
+            titles={ this.state.titles }
+            smallDescriptions={ this.state.smallDescriptions }
+            descriptions={ this.state.descriptions }
+            tags={ this.state.tags }
+          />
+        )
       case "adminPartners":
         return <AdminPartners />
     }
@@ -59,7 +101,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({ pageContent: "adminEvents" });
-    }, 100);
+    }, 200);
   }
 
   toggleAdmin() {
@@ -86,23 +128,6 @@ class App extends Component {
         <Navbar handleNavClick={ this.handleNavClick } isAdmin={ this.state.admin } />
         { this.getContent() }
         <footer className="page-footer">
-          <div className="container">
-            <div className="row">
-              <div className="col l6 s12">
-                <h5 className="white-text">Footer Content</h5>
-                <p className="grey-text text-lighten-4">Very proud bragging lines from the developer of the greatest event website with the greatest website.</p>
-              </div>
-              <div className="col l4 offset-l2 s12">
-                <h5 className="white-text">Links</h5>
-                <ul>
-                  <li><a className="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
           <div className="footer-copyright">
             <div className="container">
             © 2017 Copyright Text

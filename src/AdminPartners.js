@@ -12,24 +12,62 @@ class AdminPartners extends Component {
         "/assets/tesla.png",
         "/assets/intel.png",
         "/assets/amazon.png",
-        "/assets/google.png",
-        "/assets/apple.png",
-        "/assets/tesla.png",
-      ]
+        "/assets/nvidia.png",
+        "/assets/react.svg",
+        "/assets/asp-not.png",
+        "/assets/nodejs.svg",
+        "/assets/ecmascript.svg",
+      ],
+      saveModalDisplay: "none",
+      modalTitle: "Your changes have been saved!",
+      modalText: "Congratulations for saving your changes! Good job! Be proud!"
     }
 
     this.addPartner = this.addPartner.bind(this);
+    this.changesSaved = this.changesSaved.bind(this);
+    this.deletePartner = this.deletePartner.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.changeModalText = this.changeModalText.bind(this);
  }
 
  addPartner() {
    let partnerArray = this.state.logos;
-   partnerArray.push("/assets/tesla.png");
+   partnerArray.push("/assets/react.svg");
    this.setState({ logos: partnerArray });
+ }
+
+ deletePartner(e) {
+   console.log(e.target)
+ }
+
+ changesSaved() {
+   this.setState({ saveModalDisplay: "block" });
+ }
+
+ changeModalText() {
+   console.log("change");
+   this.setState({ modalTitle: "Nope!",  modalText: "You have to say you are honored!" })
+ }
+
+ closeModal() {
+   this.setState({ saveModalDisplay: "none", modalTitle: "Your changes have been saved!", modalText: "Congratulations for saving your changes! Good job! Be proud!" });
  }
 
  render() {
    return (
      <section id="admin-partners" className="content">
+       <div id="save-modal" style={{ "display": this.state.saveModalDisplay }}>
+         <div onClick={ this.changeModalText } className="modal-background"></div>
+         <div className="modal">
+           <div className="modal-content">
+             <h4>{ this.state.modalTitle }</h4>
+             <p>{ this.state.modalText }</p>
+           </div>
+           <div className="modal-footer">
+             <button onClick={ this.closeModal } className="modal-action modal-close waves-effect waves-green btn-flat">I am deeply honored</button>
+           </div>
+         </div>
+       </div>
        <div className="card">
          <div className="card-title"><h2>Partners</h2></div>
          <div className="card-content">
@@ -42,14 +80,14 @@ class AdminPartners extends Component {
                {
                  this.state.logos.map((item, index) => {
                    return (
-                     <li key={ index }><img src={ item } /></li>
+                     <li onClick={ this.deletePartner } key={ index }><img src={ item } /></li>
                    )
                  })
                }
              </ul>
            </div>
+           <button onClick={ this.changesSaved } className="waves-effect waves-light btn admin-button">Save</button>
          </div>
-         <button className="waves-effect waves-light btn admin-button">Save</button>
        </div>
      </section>
    );

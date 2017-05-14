@@ -9,13 +9,13 @@ class Footer extends Component {
 
  render() {
    return (
-     <footer className="page-footer">
-        <div className="footer-copyright">
-            <div className="container content">
-            © 2017 Copyright Text
-            <a className="waves-effect waves-light btn-flat admin-button" onClick={ this.props.adminSwither }>{ this.props.getAdminLabel() }</a>
-            </div>
+     <footer className="page-footer" id="footer">
+       <div className="footer-copyright">
+        <div className="container content">
+          © 2017 Copyright Text
+          <a className="waves-effect waves-light btn-flat admin-button" onClick={ this.props.adminSwither }>{ this.props.getAdminLabel() }</a>
         </div>
+      </div>
     </footer>
    );
  }

@@ -56,11 +56,7 @@ class App extends Component {
    }
 
   handleNavClick(item) {
-    if (item === "home") {
-      window.location.replace('/');
-    } else {
-      this.setState({ pageContent: item });
-    }
+    this.setState({ pageContent: item });
   }
 
   getContent() {
@@ -105,15 +101,14 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({ pageContent: "adminEvents", admin: true });
-    }, 300);
+    }, 30000);
   }
 
   adminSwither () {
     if (this.state.admin === false) {
        this.setState({ pageContent: "login" });
     } else if (this.state.admin === true) {
-       this.setState({ admin: false });
-       window.location.replace('/');
+       this.setState({ admin: false, pageContent: "home" });
     }
   }
 

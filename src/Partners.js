@@ -9,7 +9,7 @@ class Partners extends Component {
 
  render() {
    return (
-     <section id="partners" className="content">
+     <section id="partners" className="content partners">
        <div className="card">
          <div className="card-title"><h2>Partners</h2></div>
          <div className="card-content">

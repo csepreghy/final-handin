@@ -7,6 +7,10 @@ class Event extends Component {
     
   }
 
+  componentDidMount() {
+    $('.collapsible').collapsible();
+  }
+
   render() {
     return (
       <ul className="collapsible" data-collapsible="accordion">

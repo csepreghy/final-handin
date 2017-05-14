@@ -10,12 +10,12 @@ class PreLoader extends Component {
     super();
 
     this.state = {
-      currentLoadingLabel: "Securing connection",
+      currentLoadingLabel: "Moving satelites into position",
       loadingLabels: [
-        "Securing connection",
+        "Moving satelites into position",
         "Bits are moving slowly today",
         "At least you're not on hold",
-        "Moving satelites in position",
+        "Securing connection",
         "Committing latest changes",
         "Encrypting the encrypted session",
         "Downloading browser history",

@@ -10,14 +10,14 @@
   z-index: 1000
 
 .modal-background
-    background-color: #333
-    position: fixed
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    opacity: 0.7
-    z-index: 1300
+  background-color: #333
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  opacity: 0.7
+  z-index: 1300
 
 .modal
   opacity: 1
@@ -40,3 +40,21 @@
 
 .btn-flat
   color: $secondary800
+
+.content, .nav-wrapper
+  width: 1000px
+  margin: 20px auto 0 auto
+
+  @media screen and (max-width: $screen-lg)
+    width: auto
+    margin: auto
+  
+.nav-wrapper
+  margin: auto
+
+.chip
+  background-color: $primary400
+  color: $white
+
+a.keyboard_arrow_down
+  color: $primary400

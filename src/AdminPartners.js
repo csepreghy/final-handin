@@ -55,7 +55,7 @@ class AdminPartners extends Component {
 
  render() {
    return (
-     <section id="admin-partners" className="content">
+     <section id="admin-partners" className="content partners">
        <div id="save-modal" style={{ "display": this.state.saveModalDisplay }}>
          <div onClick={ this.changeModalText } className="modal-background"></div>
          <div className="modal">

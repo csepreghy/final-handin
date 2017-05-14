@@ -44,7 +44,7 @@ class AdminEvent extends Component {
      descriptionValue: this.props.description,
      tags: this.props.tags
    })
-   console.log('this.props: ', this.props);
+   $('.collapsible').collapsible();
  };
 
  toggleIsForm(item) {

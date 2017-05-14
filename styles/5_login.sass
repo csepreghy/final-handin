@@ -1,0 +1,28 @@
+.login-page
+  width: 100%
+  height: 100%
+  display: flex
+  align-content: center
+  align-items: center
+  margin-top: 20vh
+  margin-bottom: 20vh
+
+  .login-container
+    padding: 40px auto 40px auto
+    margin: auto
+    width: 400px
+    height: 280px
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+    @media screen and (max-width: $screen-md)
+      width: 90%
+    
+    img
+      width: 120px
+    
+    .login-label
+      transition: opacity 0.5s

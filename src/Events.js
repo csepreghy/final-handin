@@ -11,7 +11,7 @@ class Events extends Component {
   render() {
     return (
        <section id="events" className="content events container row">
-        <div className="col m12 s12">
+        <div className="col s12">
           {  
             this.props.titles.map((item, index) => {
                 return (

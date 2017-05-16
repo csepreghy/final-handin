@@ -279,9 +279,9 @@ class AdminEvent extends Component {
                 </div>
                 <span className="sponsors-label">Sponsors: </span>
                 <div className="logos-container">
-                  <img src="/assets/google.png" alt=""/>
-                  <img src="/assets/tesla.png" alt=""/>
-                  <img src="/assets/apple.png" alt=""/>
+                  <img src="assets/google.png" alt=""/>
+                  <img src="assets/tesla.png" alt=""/>
+                  <img src="assets/apple.png" alt=""/>
                 </div>
               </div>
             </div>

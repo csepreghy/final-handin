@@ -15,11 +15,9 @@ class PreLoader extends Component {
         "Moving satelites into position",
         "Bits are moving slowly today",
         "At least you're not on hold",
-        "Securing connection",
-        "Committing latest changes",
-        "Encrypting the encrypted session",
-        "Downloading browser history",
         "Ordering sushi",
+        "Committing latest changes",
+        "Reading browser history",
         "Downloading viruses"
       ],
       indexOfLabel: 0,
@@ -67,8 +65,8 @@ class PreLoader extends Component {
             this.setState({ opacity: 0 }); 
             this.toggleLoginLabels();
           }, 0);
-        }, 3000);
-      }, 500);
+        }, 2500);
+      }, 400);
     }
   }
 

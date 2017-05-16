@@ -40,11 +40,11 @@ class App extends Component {
         "Freegan retro flexitarian, bushwick crucifix sriracha polaroid four loko banh mi banjo. 3 wolf moon street art waistcoat, forage vexillologist pork belly art party etsy VHS yuccie typewriter viral air plant pitchfork. Hammock vaporware live-edge, af crucifix shoreditch umami godard four dollar toast man bun +1 polaroid. Farm-to-table kogi gentrify poke, thundercats."
       ],
       tags: [
-        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
-        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
-        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
-        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"],
-        ["MaciPöcörő", "YOLO", "SWAG", "JesusLovesYou!"]
+        ["React", "Workshop", "CSS", "Asp .NOT!"],
+        ["React", "Front-end", "Web Development"],
+        ["Super", "Pro", "Best eva!"],
+        ["Business", "Startup", "Denmark", "Copenhagen"],
+        ["VR", "AR", "Virtual Reality", "Design"]
       ],
     }
 
@@ -101,7 +101,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({ pageContent: "adminEvents", admin: true });
-    }, 30000);
+    }, 18500);
   }
 
   adminSwither () {

@@ -1,0 +1,322 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+#the-universe > div {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+html, body, #the-universe {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+main {
+  flex: 1 0 auto; }
+
+button {
+  background-color: #4527A0 !important;
+  color: #ffffff !important; }
+
+button:hover {
+  background-color: #673AB7 !important; }
+
+nav {
+  background-color: #EF5350; }
+
+input[type=text]:focus {
+  border-bottom: 1px solid #673AB7 !important;
+  box-shadow: 0 1px 0 0 #673AB7 !important; }
+
+input[type=text]::placeholder {
+  color: #fff; }
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.disable {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; }
+
+.modal-background {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: 1300; }
+
+.modal {
+  opacity: 1;
+  z-index: 1400;
+  display: block;
+  width: 600px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: #ffffff; }
+  @media screen and (max-width: 600px) {
+    .modal {
+      width: 95%; } }
+
+.primary {
+  color: #EF5350; }
+
+.secondary {
+  color: #4527A0; }
+
+.btn-flat {
+  color: #4527A0; }
+
+.content, .nav-wrapper {
+  width: 1000px;
+  margin: 20px auto 0 auto; }
+  @media screen and (max-width: 1260px) {
+    .content, .nav-wrapper {
+      width: auto;
+      margin: auto; } }
+
+.nav-wrapper {
+  margin: auto; }
+
+.chip {
+  background-color: #EF5350;
+  color: #ffffff; }
+
+a.keyboard_arrow_down {
+  color: #EF5350; }
+
+#about .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #about .card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #about .card .card-content iframe {
+      width: 90%;
+      height: 380px;
+      margin-bottom: 20px; }
+
+#accounts ul li a.secondary-content i {
+  position: relative;
+  top: 15px;
+  cursor: pointer; }
+
+.events {
+  margin-bottom: 20px; }
+  .events .collapsible .collapsible-header {
+    display: flex; }
+    .events .collapsible .collapsible-header .icon-container i {
+      transform: translateY(-50%);
+      position: relative;
+      top: 50%; }
+    .events .collapsible .collapsible-header .event-info-container {
+      display: flex;
+      flex-direction: column; }
+      .events .collapsible .collapsible-header .event-info-container h2 {
+        font-size: 22px;
+        margin-bottom: 5px;
+        color: #4527A0; }
+      .events .collapsible .collapsible-header .event-info-container span {
+        line-height: 2; }
+  .events .collapsible .collapsible-body {
+    display: flex;
+    justify-content: space-around; }
+    @media screen and (max-width: 600px) {
+      .events .collapsible .collapsible-body {
+        flex-direction: column; } }
+    .events .collapsible .collapsible-body .content-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .events .collapsible .collapsible-body .content-left ul li {
+        line-height: 2; }
+    .events .collapsible .collapsible-body .content-right span {
+      display: block;
+      margin-top: 10px; }
+    .events .collapsible .collapsible-body .content-right .map-container .map-img {
+      width: 300px; }
+    .events .collapsible .collapsible-body .logos-container {
+      margin-top: 10px; }
+      .events .collapsible .collapsible-body .logos-container img {
+        display: inline-block;
+        width: 50px;
+        margin-right: 30px; }
+    .events .collapsible .collapsible-body .sponsors-label {
+      font-size: 18px;
+      font-weight: 400; }
+
+#admin-events .tag-container .chip i {
+  margin: 0; }
+
+#admin-events .collapsible .collapsible-header {
+  position: relative; }
+  #admin-events .collapsible .collapsible-header button {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+    #admin-events .collapsible .collapsible-header button i {
+      width: inherit; }
+  #admin-events .collapsible .collapsible-header .event-info-container .title-container {
+    display: flex; }
+  #admin-events .collapsible .collapsible-header .event-info-container h2:hover {
+    border: 1px solid #ddd; }
+  #admin-events .collapsible .collapsible-header .event-info-container form input {
+    border: 1px solid #ddd; }
+  #admin-events .collapsible .collapsible-header .event-info-container form input.event-title {
+    margin-bottom: 0;
+    margin-top: 20px;
+    height: 30px;
+    width: 400px;
+    font-size: 20px; }
+  #admin-events .collapsible .collapsible-header .event-info-container form.small-description-form {
+    width: 250px;
+    display: inline-block; }
+  #admin-events .collapsible .collapsible-header .event-info-container form input.small-description {
+    height: 26px;
+    margin: 0;
+    width: 100%; }
+  #admin-events .collapsible .collapsible-header .event-info-container i.edit {
+    margin-top: 15px;
+    margin-left: 10px;
+    color: #4527A0; }
+  #admin-events .collapsible .collapsible-header .event-info-container i.add {
+    float: right;
+    font-size: 18px;
+    line-height: 32px; }
+  #admin-events .collapsible .collapsible-header .event-info-container #tag {
+    border: none;
+    line-height: 1;
+    height: auto;
+    width: auto;
+    transition: width 0s; }
+  #admin-events .collapsible .collapsible-header .event-info-container .small-description-container i {
+    float: none;
+    display: inline;
+    font-size: 18px; }
+  #admin-events .collapsible .collapsible-header .event-info-container span:hover {
+    border: 1px solid #ddd; }
+
+#admin-events .collapsible .collapsible-body .content-left p:hover {
+  border: 1px solid #ddd; }
+
+#admin-events .collapsible .collapsible-body .content-left #description {
+  border: 1px solid #ddd;
+  width: 620px;
+  height: 140px; }
+
+#footer {
+  padding: 0;
+  background-color: #EF5350; }
+  #footer .content {
+    margin-top: 0; }
+  #footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  #footer .footer-copyright {
+    background-color: #EF5350 !important; }
+
+.login-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 20vh; }
+  .login-page .login-container {
+    padding: 40px auto 40px auto;
+    margin: auto;
+    width: 400px;
+    height: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    @media screen and (max-width: 992px) {
+      .login-page .login-container {
+        width: 90%; } }
+    .login-page .login-container img {
+      width: 120px; }
+    .login-page .login-container .login-label {
+      transition: opacity 0.5s; }
+
+#navbar .admin-panel-label {
+  position: relative;
+  left: 100px; }
+  @media screen and (max-width: 992px) {
+    #navbar .admin-panel-label {
+      left: 0; } }
+
+.partners .card-title {
+  display: flex;
+  justify-content: center; }
+  .partners .card-title h2 {
+    font-size: 50px;
+    margin-bottom: 0; }
+
+.partners .divider {
+  margin-top: 20px; }
+
+.partners .logos-container ul li {
+  display: inline-block;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .partners .logos-container ul li img {
+    height: 100%; }
+
+#partners button {
+  margin-top: 20px; }
+
+#admin-partners {
+  z-index: 100; }
+  #admin-partners button {
+    position: relative;
+    top: -30px; }
+
+.admin-button {
+  float: right;
+  color: #fff; }
+
+#save-modal button {
+  top: 0; }
+
+#save-modal .modal {
+  opacity: 1;
+  display: block;
+  width: 600px;
+  background-color: #ffffff; }
+  @media screen and (max-width: 992px) {
+    #save-modal .modal {
+      width: 95%; } }
+
+#loader-modal button {
+  top: 0; }
+
+.collapsible {
+  transition: 1s !important; }
+
+.button-collapse {
+  cursor: pointer; }
+
+.collapsible-header {
+  border-bottom: 0; }

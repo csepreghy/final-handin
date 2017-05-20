@@ -32,7 +32,7 @@ class AdminPartners extends Component {
 
  addPartner() {
    let partnerArray = this.state.logos;
-   partnerArray.push("/assets/react.svg");
+   partnerArray.push("assets/react.svg");
    this.setState({ logos: partnerArray });
  }
 

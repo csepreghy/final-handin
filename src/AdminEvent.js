@@ -118,7 +118,7 @@ class AdminEvent extends Component {
            className="tag"
            id="tag"
            type="text" 
-           placeholder="SWAG"
+           placeholder="..."
            style={{ width: 5 + this.state.tagValue.length*8 + "px", "minWidth": "45px" }}
            onFocus={ () => { this.canBlur("tag") } } 
            onBlur={ () => { this.handleBlur("tag") } } 

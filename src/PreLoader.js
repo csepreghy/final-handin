@@ -20,7 +20,7 @@ class PreLoader extends Component {
       indexOfLabel: 0,
       opacity: 1,
       saveModalDisplay: "none",
-      modalTitle: "I said, be patient!",
+      modalTitle: "Please, be patient!",
       modalText: "Patience is a virtue!",
       disableClickingDisplay: "none"
     }
@@ -41,7 +41,7 @@ class PreLoader extends Component {
   }
 
   closeModal() {
-    this.setState({ saveModalDisplay: "none", modalTitle: "I said, be patient!", modalText: "Patience is a virtue!" });
+    this.setState({ saveModalDisplay: "none", modalTitle: "Please, be patient!", modalText: "Patience is a virtue!" });
   }
 
   disableClicking() {

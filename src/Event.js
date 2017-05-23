@@ -21,17 +21,18 @@ class Event extends Component {
             </div>
             <div className="event-info-container">
               <h2>{ this.props.title }</h2>
-                <span>{ this.props.smallDescription }</span>
-                <div className="tag-container">
-                  {
-                    this.props.tags.map((item, index) => {
-                      return (
-                        <div key={ index } className="chip">{ item }</div>
-                      )
-                    })
-                  }
-                </div>
+              <span>{ this.props.smallDescription }</span>
+              <div className="tag-container">
+                {
+                  this.props.tags.map((item, index) => {
+                    return (
+                      <div key={ index } className="chip">{ item }</div>
+                    )
+                  })
+                }
+              </div>
             </div>
+            <a href="http://www.ticketmaster.com/" id="get-ticket" className="waves-effect waves-light btn bg-secondary">Get ticket</a>
           </div>
           <div className="collapsible-body">
             <div className="content-left">

@@ -14,11 +14,8 @@ class PreLoader extends Component {
       loadingLabels: [
         "Moving satelites into position",
         "Bits are moving slowly today",
-        "At least you're not on hold",
-        "Ordering sushi",
         "Committing latest changes",
-        "Reading browser history",
-        "Downloading viruses"
+        "Reading browser history"
       ],
       indexOfLabel: 0,
       opacity: 1,

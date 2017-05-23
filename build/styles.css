@@ -79,6 +79,11 @@ input[type=text]::placeholder {
 .secondary {
   color: #4527A0; }
 
+.bg-secondary {
+  background-color: #4527A0; }
+  .bg-secondary:hover {
+    background-color: #673AB7; }
+
 .btn-flat {
   color: #4527A0; }
 
@@ -320,3 +325,11 @@ a.keyboard_arrow_down {
 
 .collapsible-header {
   border-bottom: 0; }
+
+.collapsible-header {
+  position: relative; }
+
+#get-ticket {
+  position: absolute;
+  right: 20px;
+  top: 45px; }

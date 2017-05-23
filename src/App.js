@@ -101,7 +101,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({ pageContent: "adminEvents", admin: true });
-    }, 18500);
+    }, 8500);
   }
 
   adminSwither () {

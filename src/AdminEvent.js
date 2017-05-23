@@ -44,7 +44,7 @@ class AdminEvent extends Component {
      descriptionValue: this.props.description,
      tags: this.props.tags
    })
-   $('.collapsible').collapsible();
+   //$('.collapsible').collapsible();
  };
 
  toggleIsForm(item) {
@@ -195,15 +195,15 @@ class AdminEvent extends Component {
  }
 
  delete() {
-   this.setState({ eventDisplay: "none", modalDisplay: "none" });
+   this.setState({ eventDisplay: 'none', modalDisplay: 'none' });
  }
 
  deleteModal() {
-   this.setState({ modalDisplay: "block" })
+   this.setState({ modalDisplay: 'block' })
  }
 
  closeModal() {
-   this.setState({ modalDisplay: "none" });
+   this.setState({ modalDisplay: 'none' });
  }
 
  render() {

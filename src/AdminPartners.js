@@ -76,7 +76,6 @@ class AdminPartners extends Component {
            <h5>Our Partners:</h5>
            <div className="logos-container">
              <ul>
-               <li><button onClick={ this.addPartner } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button></li>
                {
                  this.state.logos.map((item, index) => {
                    return (
@@ -84,6 +83,7 @@ class AdminPartners extends Component {
                    )
                  })
                }
+               <li><button onClick={ this.addPartner } className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button></li>
              </ul>
            </div>
            <button onClick={ this.changesSaved } className="waves-effect waves-light btn admin-button">Save</button>

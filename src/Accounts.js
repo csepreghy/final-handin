@@ -55,6 +55,7 @@ class Accounts extends Component {
   render() {
     return (
       <section className="content" id="accounts">
+        <div className="center"><h2>Admin Accounts</h2></div>
         <div className="fixed-action-btn">
           <button onClick={ this.addAccount } className="btn-floating btn-large waves-effect waves-light z-depth-4"><i className="material-icons">add</i></button>
         </div>

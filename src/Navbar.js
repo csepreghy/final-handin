@@ -100,7 +100,7 @@ class Navbar extends Component {
         </ul>
         <nav>
           <div className="nav-wrapper">
-            <div onClick={ () => this.props.handleNavClick("home") } className="brand-logo">Logo</div>
+            <div className="brand-logo">Logo</div>
             { this.getAdminNavElement() }
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               { this.getEvents() }

@@ -32,7 +32,7 @@ class Event extends Component {
                 }
               </div>
             </div>
-            <a href="http://www.ticketmaster.com/" id="get-ticket" className="waves-effect waves-light btn bg-secondary">Get ticket</a>
+            <a href="https://www.eventbrite.com/" id="get-ticket" className="waves-effect waves-light btn bg-secondary">Get ticket</a>
           </div>
           <div className="collapsible-body">
             <div className="content-left">
